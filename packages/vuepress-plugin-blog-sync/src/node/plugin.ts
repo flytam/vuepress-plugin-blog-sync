@@ -1,4 +1,5 @@
 import { createHash } from 'crypto'
+import path from 'path'
 import type { Plugin } from '@vuepress/core'
 import { createPage } from '@vuepress/core'
 import { run } from 'csdnsynchexo'
@@ -44,7 +45,7 @@ export const blogSyncPlugin = ({ catalog, syncConfig, navbar }: Options): Plugin
 
       for (const [categoryName, categoryList] of Object.entries(blogMetaContext.categoryMap)) {
         for (const item of categoryList) {
-          const htmlPath = `${app.siteData.base}${categoryName}/${item.title}.html`
+          const htmlPath = `/${categoryName}/${item.title}.html`
           item.path = htmlPath
           const formatDate = dayjs(item.date).format('YYYY-MM-DD')
           app.pages.push(
@@ -77,10 +78,10 @@ export const blogSyncPlugin = ({ catalog, syncConfig, navbar }: Options): Plugin
 
                   content += `## ${k}\n\n`
                   v.forEach((x) => {
-                    content += `#### [${x.title}](${x.path?.replace(
+                    content += `#### [${x.title}](${path.join(app.siteData.base, `${x.path?.replace(
                       /\s/g,
                       '%20',
-                    )})\n\n`
+                    )}`)})\n\n`
                   })
                   content += '\n\n'
 

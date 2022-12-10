@@ -2,7 +2,7 @@
 [![Version](https://img.shields.io/npm/v/vuepress-plugin-blog-sync.svg)](https://www.npmjs.com/package/vuepress-plugin-blog-sync)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
-> 输入博客基本信息，一键生成 vuepress2文档站/ Input blog basic info, generate vuepress2 site automatically
+> 输入网站基本信息，一键生成 vuepress2文档站/ Input blog site info, generate vuepress2 site automatically
 
 
 ## 安装
