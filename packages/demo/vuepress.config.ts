@@ -7,11 +7,17 @@ export default defineUserConfig({
   description: 'Input juejin/csdn/github/etc, output vuepress2 web site',
   base: '/vuepress-plugin-blog-sync/',
   plugins: [
+    // @ts-expect-error ignore
     blogSyncPlugin({
-      syncConfig: {
+      syncConfig: [{
         type: 'juejin',
         userId: '3456520257288974',
       },
+      // {
+      //   type: 'csdn',
+      //   userId: 'flytam',
+      // },
+      ],
     }),
   ],
   theme: defaultTheme({

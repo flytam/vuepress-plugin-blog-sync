@@ -47,7 +47,9 @@ export default defineUserConfig({
 - syncConfig
   - 默认值（无，必选参数）
   - 详情
-    - 需要同步的页面信息，透传`csdnsynchexo`node api的配置，[参考](https://github.com/flytam/CsdnSyncHexo#%E6%94%AF%E6%8C%81%E5%B9%B3%E5%8F%B0)
+    - 需要同步的页面信息，透传`csdnsynchexo`node api的配置，[参考](https://github.com/flytam/CsdnSyncHexo#%E6%94%AF%E6%8C%81%E5%B9%B3%E5%8F%B0)。传数组时表示可以对多个博客进行拉取
+    - 定义参数
+      - `SyncConfig | SyncConfig[]`
 
 
 - catalog

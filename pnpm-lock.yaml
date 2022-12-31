@@ -50,7 +50,7 @@ importers:
       '@vuepress/core': ^2.0.0-beta.50
       '@vuepress/theme-default': 2.0.0-beta.57
       bumpp: ^7.1.1
-      csdnsynchexo: ^3.1.5
+      csdnsynchexo: ^3.1.8
       dayjs: ^1.11.7
       escape-html: ^1.0.3
       fs-extra: ^11.1.0
@@ -63,7 +63,7 @@ importers:
       '@babel/traverse': 7.20.5
       '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.50-pre.1
-      csdnsynchexo: 3.1.5
+      csdnsynchexo: 3.1.8
       dayjs: 1.11.7
       escape-html: 1.0.3
       fs-extra: 11.1.0
@@ -1088,7 +1088,7 @@ packages:
   /@types/cheerio/0.22.31:
     resolution: {integrity: sha512-Kt7Cdjjdi2XWSfrZ53v4Of0wG3ZcmaegFXjMmz9tfNrZSkzzo36G0AL1YqSdcIA78Etjt6E609pt5h1xnQkPUw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.11.12
     dev: false
 
   /@types/debug/4.1.7:
@@ -1108,7 +1108,7 @@ packages:
   /@types/graceful-fs/4.1.5:
     resolution: {integrity: sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.11.12
     dev: false
 
   /@types/hash-sum/1.0.0:
@@ -1125,7 +1125,7 @@ packages:
   /@types/keyv/3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.11.12
     dev: false
 
   /@types/linkify-it/3.0.2:
@@ -1167,7 +1167,6 @@ packages:
 
   /@types/node/18.11.12:
     resolution: {integrity: sha512-FgD3NtTAKvyMmD44T07zz2fEf+OKwutgBCEVM8GcvMGVGaDktiLNTDvPwC/LUe3PinMW+X6CuLOF2Ui1mAlSXg==}
-    dev: true
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -1180,7 +1179,7 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.11.12
     dev: false
 
   /@types/semver/7.3.13:
@@ -2122,6 +2121,12 @@ packages:
       balanced-match: 1.0.2
       concat-map: 0.0.1
 
+  /brace-expansion/2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+    dependencies:
+      balanced-match: 1.0.2
+    dev: false
+
   /braces/3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
     engines: {node: '>=8'}
@@ -2650,8 +2655,8 @@ packages:
     resolution: {integrity: sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow==}
     dev: false
 
-  /csdnsynchexo/3.1.5:
-    resolution: {integrity: sha512-UYjRR6GL1mbSD74oxpEKCS8Z7gspf8p7tvu8ouM2hFXhag99bmYvdVnuNDrc9j5FEDWdWcJSvu8PgqE0bTpsqg==}
+  /csdnsynchexo/3.1.8:
+    resolution: {integrity: sha512-DX+9NgK9i0bpUvZhy9bzfM3ReaoYOIYTvhWw/nnqiA//70XwXm57xlkpyjkevRJi2gSP/MnJWtHTUn01kLt44w==}
     hasBin: true
     dependencies:
       '@types/cheerio': 0.22.31
@@ -2661,6 +2666,7 @@ packages:
       commander: 6.2.1
       filenamify: 4.3.0
       fs-extra: 9.1.0
+      glob: 8.0.3
       picgo: 1.5.0
       sitdown: 1.1.7
     transitivePeerDependencies:
@@ -3827,7 +3833,7 @@ packages:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
-      mime-types: 2.1.33
+      mime-types: 2.1.35
     dev: false
 
   /formstream/1.1.1:
@@ -4040,6 +4046,17 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+
+  /glob/8.0.3:
+    resolution: {integrity: sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 5.1.2
+      once: 1.4.0
+    dev: false
 
   /global-dirs/0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
@@ -5155,6 +5172,13 @@ packages:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
       brace-expansion: 1.1.11
+
+  /minimatch/5.1.2:
+    resolution: {integrity: sha512-bNH9mmM9qsJ2X4r2Nat1B//1dJVcn3+iBLa3IgqJ7EbGaDNepL9QSHOxN4ng33s52VMMhhIfgCYDk3C4ZmlDAg==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: false
 
   /minimist-options/4.1.0:
     resolution: {integrity: sha512-Q4r8ghd80yhO/0j1O3B2BjweX3fiHg9cdOwjJd2J76Q135c+NDxGCqdYKQ1SKBuFfgWbAUzBfvYjPUEeNgqN1A==}

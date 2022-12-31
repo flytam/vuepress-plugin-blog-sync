@@ -3,6 +3,8 @@ import type { DefaultThemeData } from '@vuepress/theme-default'
 import type { run } from 'csdnsynchexo'
 import type { ArticleItem } from 'csdnsynchexo/dist/extension/base'
 
+export type SyncConfig = Parameters<typeof run>[0]
+
 export interface Options {
   /**
      * 目录页配置
@@ -18,7 +20,7 @@ export interface Options {
     /**
        * 自定义生成目录页
        */
-    generateContent?: (categoryMeta: BlogMetaContext) => string
+    generateContent?: (categoryMeta: BlogMetaContext) => string | Promise<string>
   }
   | false
   /**
@@ -29,7 +31,7 @@ export interface Options {
   navbar?: {
     custom?: (originNavbarConfig: DefaultThemeData['navbar'], blogMetaContext: BlogMetaContext) => DefaultThemeData['navbar']
   } | false
-  syncConfig: Parameters<typeof run>[0]
+  syncConfig: SyncConfig | SyncConfig[]
 }
 
 export interface ArticleModel extends ArticleItem {

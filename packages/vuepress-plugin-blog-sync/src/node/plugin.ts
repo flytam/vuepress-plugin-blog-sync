@@ -10,7 +10,7 @@ import parser from '@babel/parser'
 import generate from '@babel/generator'
 import type { DefaultThemeData, NavbarConfig, NavbarGroup } from '@vuepress/theme-default'
 import escape from 'escape-html'
-import type { ArticleModel, BlogMetaContext, Options } from './type'
+import type { ArticleModel, BlogMetaContext, Options, SyncConfig } from './type'
 
 export const blogSyncPlugin = ({ catalog, syncConfig, navbar }: Options): Plugin => {
   const blogMetaContext: BlogMetaContext = {
@@ -21,7 +21,18 @@ export const blogSyncPlugin = ({ catalog, syncConfig, navbar }: Options): Plugin
   return {
     name: 'sync-plugin',
     onInitialized: async(app) => {
-      const list = await run(syncConfig) as ArticleModel[]
+      const syncConfigList: SyncConfig[] = []
+      if (Array.isArray(syncConfig)) {
+        syncConfigList.push(...syncConfig)
+      }
+      else {
+        syncConfigList.push(syncConfig)
+      }
+
+      const list = await Promise.all(syncConfigList.map(c => run(c))).then(l => l.reduce<ArticleModel[]>((l, item) => {
+        l = l.concat(item)
+        return l
+      }, []))
 
       blogMetaContext.tagMap = {}
       blogMetaContext.categoryMap = {}
@@ -94,7 +105,7 @@ export const blogSyncPlugin = ({ catalog, syncConfig, navbar }: Options): Plugin
           app.pages.unshift(
             await createPage(app, {
               ...basicPageOptions,
-              content: catalog.generateContent?.(blogMetaContext),
+              content: await catalog.generateContent?.(blogMetaContext),
             }),
           )
         }
