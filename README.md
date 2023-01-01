@@ -23,7 +23,6 @@ import { blogSyncPlugin } from 'vuepress-plugin-blog-sync'
 export default defineUserConfig({
 // ....
   plugins: [
-    plugins: [
     blogSyncPlugin({
       syncConfig: {
         type: 'juejin',
@@ -31,7 +30,6 @@ export default defineUserConfig({
       },
     }),
   ]
-  ],
 // ....
 })
 ```
