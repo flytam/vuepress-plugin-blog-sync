@@ -1,0 +1,1 @@
+import{_ as e,z as t,A as c,Y as _}from"./framework-cb9358d9.js";const o={},s=_("p",null,[_("img",{src:"https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/774695f54f77400abe452ce87844c3c8~tplv-k3u1fbpfcp-zoom-1.image",alt:""})],-1),n=[s];function a(f,l){return t(),c("div",null,n)}const i=e(o,[["render",a],["__file","政采云 2021 届校园招聘正式启动！.html.vue"]]);export{i as default};
